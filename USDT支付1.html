@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://676l.com/sc/zhanghao/6206366297621/0.18 -->
+<html lang="zh-CN"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+</style><script src="chrome-extension://jlpcnoohcpfgpbalhlggdhjocgnlgafn/assets/main-world.ts-4ed993c7.js" type="module"></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>USDT支付1</title>
+    <link rel="stylesheet" href="./USDT支付1_files/animate.min.css">
+    <style>
+        :root {
+            --text-color: rgb(31, 34, 37);
+            --warn-color: tomato;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            /* background-color: #e2e2e2; */
+            min-width: 400px;
+        }
+
+        body {
+        }
+
+        @keyframes moiveAnimation {
+
+            0%,
+            100% {
+                background-size: 130vw 130vh, 120vw 120vh, 100vw 150vh, 120vw 130vh;
+                background-position: -80vw -80vh, 30vw -20vh, -20vw 20vh, 30vw 20vh;
+            }
+
+            25% {
+                background-size: 120vw 120vh, 130vw 150vh, 130vw 120vh, 100vw 110vh;
+                background-position: -30vw -30vh, 40vw -10vh, 0vw 10vh, -10vw 20vh;
+            }
+
+            50% {
+                background-size: 130vw 130vh, 140vw 100vh, 100vw 150vh, 90vw 110vh;
+                background-position: 10vw -60vh, 20vw 10vh, 10vw 30vh, 10vw -20vh;
+            }
+
+            75% {
+                background-size: 140vw 140vh, 100vw 130vh, 100vw 150vh, 130vw 110vh;
+                background-position: -70vw -70vh, 0vw -10vh, 30vw -20vh, 20vw 30vh;
+            }
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+        }
+
+        .title {
+            margin-top: 20px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            font-size: 16px;
+        }
+
+        .title h1 {
+            font-size: 22px;
+        }
+
+        .title svg {
+            margin-right: 20px;
+            width: 30px;
+            height: 30px;
+            font-weight: bold;
+        }
+
+        .box {
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .head {
+            width: 95%;
+            border-radius: 10px;
+            margin-top: 25px;
+            box-shadow: 0 0 10px gray;
+            background-color: #fff;
+            /* border: 1px solid rgba(197, 231, 213, 1); */
+            /* background-color: rgba(237, 247, 242, 1); */
+            padding: 13px;
+        }
+
+        .head_container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .n-base-icon {
+            width: 1.5em;
+            height: 1.5em;
+            line-height: 1.5em;
+        }
+
+        .n-base-icon svg {
+            color: #18a058;
+        }
+
+        .l1 {
+            font-size: 16px;
+            line-height: 19px;
+            color: var(--text-color);
+        }
+
+        .l2 {
+            margin-top: 10px;
+            display: flex;
+            font-size: 14px;
+        }
+
+        .l2_1 {
+            margin-right: 20px;
+        }
+
+        #rate {
+            color: var(--warn-color);
+            margin: 0 5px;
+        }
+
+        .l3 {
+            color: var(--warn-color);
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .body {
+            border-radius: 10px;
+            width: 100%;
+            margin: 15px 0;
+            box-shadow: 0 0 10px gray;
+            /* background-color: #fff; */
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+            overflow-y: auto;
+        }
+
+        .tip {
+            padding: 10px;
+            box-sizing: border-box;
+            background-color: #fff;
+            font-size: 14px;
+        }
+
+        .walletBox {
+            max-height: 350px;
+            overflow-y: auto;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .wallet {
+            position: relative;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            background-color: #fff;
+            /* border-bottom: 1px solid rgb(240, 236, 236); */
+            cursor: pointer;
+            border-bottom: 1px solid #f1f1f1;
+        }
+
+        .wallet:last-child {
+            border-color: transparent;
+        }
+
+        .icon {
+            width: 85px;
+            height: 84px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .icon img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .walletInfo {
+            height: 60px;
+        }
+
+        .info {
+            display: block;
+        }
+
+        .warn {
+            margin: 14px 0;
+        }
+
+        .warn.red {
+            color: var(--warn-color);
+        }
+
+        @media screen and (max-width: 750px) {
+            .head {
+                width: 95%;
+                box-sizing: border-box;
+            }
+
+            .body {
+                width: 95%;
+                margin: 15px;
+                background-color: #fff;
+                border-radius: 10px;
+                /* box-shadow: 0 0 4px gray; */
+                /* padding: 15px; */
+            }
+
+            .icon {
+                width: 70px;
+                height: 70px;
+            }
+
+            img {
+                width: 40px;
+                height: 40px;
+            }
+
+            .walletInfo {
+                height: 40px;
+            }
+
+            .warn {
+                margin: 8px 0;
+            }
+        }
+
+        .control {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            display: flex;
+            background-color: #fff;
+            padding: 10px;
+        }
+
+        .control .b {
+            width: 80px;
+            cursor: pointer;
+            border: 1px solid #f1f1f1;
+            padding: 6px;
+            margin: 0 15px;
+            border-radius: 10px;
+            font-size: 14px;
+            text-align: center;
+            transform: scale(1, 1);
+            transform-origin: center center;
+            transition: all 0.15s;
+        }
+
+        .control .b:first-child {
+            margin-left: 0;
+        }
+
+        .control .b:hover {
+            box-shadow: 0 0 4px #bbb9b9;
+            transform: scale(1.05, 1.05);
+        }
+
+        .control .b.active {
+            background-color: #18a058;
+            color: #fff;
+        }
+
+        .zz {
+            display: none;
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.3);
+            z-index: 9;
+        }
+
+        .module {
+            width: 700px;
+            height: 700px;
+            background-color: #fff;
+            position: fixed;
+            top: -1000px;
+            border-radius: 10px;
+            z-index: 10;
+            transition: top 0s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .module img {
+            width: 43%;
+            margin: 0 5px;
+            height: auto;
+        }
+
+        .module.show {
+            position: absolute;
+            top: 30px;
+        }
+
+        .btn {
+            width: 100%;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .btn button {
+            border: none;
+            outline: none;
+            width: 100px;
+            height: 40px;
+            font-size: 13px;
+            border-radius: 10px;
+            background-color: #26c46f;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 750px) {
+            .title {
+                padding: 0 20px;
+                box-sizing: border-box;
+            }
+
+            .module {
+                width: 90%;
+                height: 670px;
+            }
+        }
+
+        .warninfo {
+            width: 100%;
+        }
+
+        .l {
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px 0;
+            font-weight: bold;
+        }
+
+        .warninfo .head {
+            width: 85%;
+            border: 1px solid rgb(133, 190, 236);
+            margin: 0 auto;
+            box-shadow: 0 0 0 #fff;
+        }
+
+        .warninfo .head .head_info {
+            flex: 1;
+            margin-left: 10px;
+        }
+
+        .link {
+            margin-top: 20px;
+            padding: 20px;
+            width: 90%;
+            box-sizing: border-box;
+            word-break: break-all;
+            text-align: left;
+            background-color: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        #teachimg {
+            margin: 10px 0;
+            height: 600px;
+            overflow-y: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        #teachimg img {
+            margin: 5px;
+        }
+
+        .reader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            width: 100vw;
+            height: 100vh;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 11;
+            transform-origin: center center;
+        }
+
+        .reader img {
+            /* margin-top: 50px; */
+            height: 80%;
+        }
+
+        .walletout {
+            display: flex;
+            overflow: hidden;
+            overflow-y: auto;
+            position: relative;
+            width: 200%;
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .walletout .walletBox {
+            width: 50%;
+            flex-shrink: 0;
+        }
+
+
+        @media screen and (max-width: 750px) {
+            .reader img {
+                width: 90%;
+            }
+
+            .info,
+            .warn {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<noscript>您的浏览器不支持javascript</noscript>
+<div class="container">
+    <div class="box">
+        <div class="title">
+            <div class="logo">
+                <svg t="1723040851427" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4315" width="20" height="20">
+                    <path d="M246.4 912a2.1 2.1 0 1 0 134.4 0 2.1 2.1 0 1 0-134.4 0Z" p-id="4316" fill="#000000"></path>
+                    <path d="M716.8 912a2.1 2.1 0 1 0 134.4 0 2.1 2.1 0 1 0-134.4 0Z" p-id="4317" fill="#000000"></path>
+                    <path d="M905.6 764.8l-537.6 0c-28.8 0-57.6-25.6-64-54.4l-96-566.4c-9.6-54.4-60.8-96-115.2-96l-22.4 0c-12.8 0-25.6 12.8-25.6 25.6 0 12.8 12.8 25.6 25.6 25.6l22.4 0c28.8 0 57.6 25.6 64 54.4l96 566.4c9.6 54.4 60.8 96 115.2 96l537.6 0c12.8 0 25.6-12.8 25.6-25.6C931.2 777.6 921.6 764.8 905.6 764.8z" p-id="4318" fill="#000000"></path>
+                    <path d="M880 179.2l-572.8 0c-12.8 0-25.6 12.8-25.6 25.6 0 12.8 12.8 25.6 25.6 25.6l572.8 0c25.6 0 38.4 16 32 41.6l-70.4 281.6c-6.4 32-41.6 57.6-73.6 60.8l-396.8 28.8c-12.8 0-25.6 12.8-22.4 28.8 0 12.8 12.8 25.6 28.8 22.4l396.8-28.8c54.4-3.2 105.6-48 118.4-99.2l70.4-281.6C976 230.4 937.6 179.2 880 179.2z" p-id="4319" fill="#000000"></path>
+                </svg>
+            </div>
+
+            <h1>收银台</h1>
+        </div>
+        <div class="head animate__animated animate__bounceIn">
+            <div class="head_container">
+                <i class="n-base-icon">
+                    <svg viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g fill-rule="nonzero">
+                                <path d="M24,4 C35.045695,4 44,12.954305 44,24 C44,35.045695 35.045695,44 24,44 C12.954305,44 4,35.045695 4,24 C4,12.954305 12.954305,4 24,4 Z M32.6338835,17.6161165 C32.1782718,17.1605048 31.4584514,17.1301307 30.9676119,17.5249942 L30.8661165,17.6161165 L20.75,27.732233 L17.1338835,24.1161165 C16.6457281,23.6279612 15.8542719,23.6279612 15.3661165,24.1161165 C14.9105048,24.5717282 14.8801307,25.2915486 15.2749942,25.7823881 L15.3661165,25.8838835 L19.8661165,30.3838835 C20.3217282,30.8394952 21.0415486,30.8698693 21.5323881,30.4750058 L21.6338835,30.3838835 L32.6338835,19.3838835 C33.1220388,18.8957281 33.1220388,18.1042719 32.6338835,17.6161165 Z" fill="#18a058"></path>
+                            </g>
+                        </g>
+                    </svg>
+                </i>
+                <div class="head_info">
+                    <div class="l1"><span>订单信息</span></div>
+                    <div class="l2">
+                        <div class="l2_1">
+                            订单号：<span id="number">6206366297621</span>
+                        </div>
+                        <div class="l2_2">付款金额：<span id="rate">0.18</span>USDT</div>
+                    </div>
+                    <div class="l3">
+                  <span>
+                    由于第三方充值风控限制，目前只能USDT充值，请使用相应钱包进行转账充值，充值成功自动发货。
+                  </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="body animate__animated animate__bounceIn">
+            <div class="control">
+                <div class="b b1 active">快捷支付</div>
+
+                <div class="b b2">手动支付</div>
+            </div>
+            <div class="tip">USDT - 请选择付款使用的钱包（下滑获取更多）</div>
+            <div class="walletout">
+                <!-- 快捷支付 -->
+                <div class="walletBox" id="handy">
+                    <div class="wallet handy">
+                        <div class="icon">
+                            <img src="./USDT支付1_files/imToken.png" alt="">
+                        </div>
+                        <div class="walletInfo">
+                            <div class="info">
+                                <div class="name">imToken - TRC20 / ERC20 / BEP20</div>
+                                <div class="warn red">
+                                    【推荐】快捷支付
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wallet handy">
+                        <div class="icon">
+                            <img src="./USDT支付1_files/tokenPocket.png" alt="">
+                        </div>
+                        <div class="walletInfo">
+                            <div class="info">
+                                <div class="name">TokenPocket - TRC20 / ERC20 / BEP20</div>
+                                <div class="warn red">
+                                    【推荐】快捷支付
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wallet handy">
+                        <div class="icon">
+                            <img src="./USDT支付1_files/okex.png" alt="">
+                        </div>
+                        <div class="walletInfo">
+                            <div class="info">
+                                <div class="name">欧易web3钱包 - TRC20 / ERC20</div>
+                                <div class="warn">
+                                    快捷支付，使用欧易web3钱包，交易所无法识别
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wallet handy">
+                        <div class="icon">
+                            <img src="./USDT支付1_files/metaMask.png" alt="">
+                        </div>
+                        <div class="walletInfo">
+                            <div class="info">
+                                <div class="name">MetaMask - ERC20 / BEP20</div>
+                                <div class="warn">快捷支付</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wallet handy">
+                        <div class="icon">
+                            <img src="./USDT支付1_files/trust.png" alt="">
+                        </div>
+                        <div class="walletInfo">
+                            <div class="info">
+                                <div class="name">Trust Wallet - ERC20</div>
+                                <div class="warn">快捷支付</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--                    <div class="wallet handy">-->
+                    <!--                        <div class="icon">-->
+                    <!--                            <img src="/static/images/tronLink.png" alt=""/>-->
+                    <!--                        </div>-->
+                    <!--                        <div class="walletInfo">-->
+                    <!--                            <div class="info">-->
+                    <!--                                <div class="name">TronLink - TRC20</div>-->
+                    <!--                                <div class="warn">-->
+                    <!--                                    【快捷支付】如点击无反应，请手机浏览器访问此网页-->
+                    <!--                                </div>-->
+                    <!--                            </div>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
+
+                    <div class="wallet handy">
+                        <div class="icon">
+                            <img src="./USDT支付1_files/bitKeep.png" alt="">
+                        </div>
+                        <div class="walletInfo">
+                            <div class="info">
+                                <div class="name">BitKeep - TRC20 / ERC20</div>
+                                <div class="warn">快捷支付</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 手动支付 -->
+                <div class="walletBox" id="hand">
+                    <div class="wallet hand">
+                        <div class="icon">
+                            <img src="./USDT支付1_files/bitpie.jpg" alt="">
+                        </div>
+                        <div class="walletInfo">
+                            <div class="info">
+                                <div class="name">BitPie比特派 - TRC20 / ERC20 / BEP20</div>
+                                <div class="warn red">
+                                    点击无反应？尝试使用手动支付
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wallet hand">
+                        <div class="icon">
+                            <img src="./USDT支付1_files/imToken.png" alt="">
+                        </div>
+                        <div class="walletInfo">
+                            <div class="info">
+                                <div class="name">imToken - TRC20 / ERC20 / BEP20</div>
+                                <div class="warn red">
+                                    点击无反应？尝试使用手动支付
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wallet hand">
+                        <div class="icon">
+                            <img src="./USDT支付1_files/tokenPocket.png" alt="">
+                        </div>
+                        <div class="walletInfo">
+                            <div class="info">
+                                <div class="name">TokenPocket - TRC20 / ERC20 / BEP20</div>
+                                <div class="warn red">
+                                    点击无反应？尝试使用手动支付
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wallet hand">
+                        <div class="icon">
+                            <img src="./USDT支付1_files/okex.png" alt="">
+                        </div>
+                        <div class="walletInfo">
+                            <div class="info">
+                                <div class="name">欧易web3钱包 - TRC20 / ERC20</div>
+                                <div class="warn red">
+                                    点击无反应？尝试使用手动支付
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wallet hand">
+                        <div class="icon">
+                            <img src="./USDT支付1_files/tronLink.png" alt="">
+                        </div>
+                        <div class="walletInfo">
+                            <div class="info">
+                                <div class="name">TronLink - TRC20</div>
+                                <div class="warn">
+                                    手动支付
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wallet hand">
+                        <div class="icon">
+                            <img src="./USDT支付1_files/metaMask.png" alt="">
+                        </div>
+                        <div class="walletInfo">
+                            <div class="info">
+                                <div class="name">MetaMask - ERC20 / BEP20</div>
+                                <div class="warn">手动支付</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wallet hand">
+                        <div class="icon">
+                            <img src="./USDT支付1_files/trust.png" alt="">
+                        </div>
+                        <div class="walletInfo">
+                            <div class="info">
+                                <div class="name">Trust Wallet - ERC20</div>
+                                <div class="warn">手动支付</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wallet hand">
+                        <div class="icon">
+                            <img src="./USDT支付1_files/bitKeep.png" alt="">
+                        </div>
+                        <div class="walletInfo">
+                            <div class="info">
+                                <div class="name">BitKeep - ERC20</div>
+                                <div class="warn">手动支付</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="zz" id="zz"></div>
+    <div class="module animate__animated" id="module">
+        <div class="warninfo">
+            <div class="l">操作流程</div>
+            <div class="head">
+                <div class="head_container">
+                    <i class="n-base-icon">
+                        <svg style="width: 24px; height: 24px" t="1723089284546" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4277">
+                            <path d="M512 32C246.912 32 32 246.912 32 512c0 265.088 214.912 480 480 480 265.088 0 480-214.912 480-480 0-265.088-214.912-480-480-480z m0 896C282.24 928 96 741.76 96 512S282.24 96 512 96s416 186.24 416 416-186.24 416-416 416z" p-id="4278" fill="#1296db"></path>
+                            <path d="M512 384a32 32 0 0 0-32 32v352a32 32 0 0 0 64 0V416a32 32 0 0 0-32-32zM464 272a48 48 0 1 0 96 0 48 48 0 1 0-96 0z" p-id="4279" fill="#1296db"></path>
+                        </svg>
+                    </i>
+                    <div class="head_info">
+                        <div class="l1"><span>点击查看大图</span></div>
+                        <div class="l3">
+                    <span>
+                      请复制以下链接到手机钱包打开，电脑无法下单支付。
+                    </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="teachimg"></div>
+
+        <div class="link" id="link"></div>
+        <div class="btn">
+            <button id="close">复制并关闭</button>
+        </div>
+    </div>
+</div>
+
+<div class="reader" id="reader">
+    <img src="https://676l.com/sc/zhanghao/6206366297621/0.18" id="imgreader" alt="">
+</div>
+<script>
+    function replaceHostInUrl(text, newHost) {
+        return text.replace(/https:\/\/([^\/]+)(\/[^\s]*)?/g, (match, p1, p2) => {
+            const url = new URL(match);
+            url.host = newHost; // 替换主机部分
+            return url.origin + (p2 || ''); // 返回新的 URL
+        });
+    }
+
+    let p_url = "pay.tp18.vip";
+    p_url = replaceHostInUrl(window.location.href, p_url);
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const wallet1s = document.querySelectorAll(".handy");
+        const wallet2s = document.querySelectorAll(".hand");
+        const b = document.querySelectorAll(".b");
+        const walletout = document.querySelector(".walletout");
+        const teachimg = document.getElementById("teachimg");
+        const imgreader = document.getElementById("imgreader");
+        const reader = document.getElementById("reader");
+        const link = document.getElementById("link");
+        const zz = document.getElementById("zz");
+        const module = document.getElementById("module");
+        const close = document.getElementById("close");
+        // 数据
+        const images = [
+            {
+                img: [
+                    "/static/images/teach/15.png",
+                    "/static/images/teach/16.png",
+                ],
+                url: p_url + "/pay",
+            },
+            {
+                img: [
+                    "/static/images/teach/1.png",
+                    "/static/images/teach/2.png",
+                ],
+                url: p_url + "/pay",
+            },
+            {
+                img: [
+                    "/static/images/teach/3.png",
+                    "/static/images/teach/4.png",
+                ],
+                url: p_url + "/pay",
+            },
+            {
+                img: [
+
+                    "/static/images/teach/5.png",
+                    "/static/images/teach/6.png"
+                ],
+                url: '抱歉,欧意支付渠道正在维护中...'
+                // url: p_url + "/pay",
+            },
+            {
+                img: [
+
+                    "/static/images/teach/7.png",
+                    "/static/images/teach/8.png",
+                ],
+                url: p_url + "/pay",
+            },
+            {
+                img: [
+
+                    "/static/images/teach/9.png",
+                    "/static/images/teach/10.png",
+                ],
+                url: p_url + "/pay",
+            },
+            {
+                img: [
+                    "/static/images/teach/11.png",
+                    "/static/images/teach/12.png"
+
+                ],
+                url: p_url + "/pay",
+            },
+            {
+                img: [
+                    "/static/images/teach/13.png",
+                    "/static/images/teach/14.png"
+                ],
+                url: p_url + "/pay",
+            },
+        ];
+
+
+        // 快捷支付钱包点击事件
+        wallet1s.forEach((wallet, i) => {
+            wallet.addEventListener("click", () => {
+                let url;
+                switch (i) {
+                    case 0:
+                        url = "imtokenv2://navigate?screen=DappView&url=" + p_url + "/pay";
+                        break;
+                    case 1:
+                        url = 'tpdapp://open?params={"url":"' + encodeURIComponent(p_url + "/pay") + '"}';
+                        break;
+                    case 2:
+                        // url = 'okx://wallet/dapp/details?dappUrl=' + p_url + "/pay?net=tron";
+                        // url = '#';
+                        alert('OKEX支付渠道维护中...');
+                        return;
+                    case 3:
+                        url = 'https://metamask.app.link/dapp/' + p_url + "/pay";
+                        break;
+                    case 4:
+                        url = 'trust://open_url?coin_id=60&url=' + p_url + "/pay";
+                        break;
+                    case 5:
+                        url = 'bitkeep://bkconnect?action=dapp&url=' + p_url + "/pay";
+                        console.log(url);
+                        break;
+                    case 6:
+                        url = "";
+                        break;
+                    case 7:
+                        url = "";
+                        break;
+                }
+                location.href = url; // 跳转到指定的 URL
+            });
+        });
+
+        // 手动支付钱包点击事件
+        wallet2s.forEach((wallet, i) => {
+            wallet.addEventListener("click", () => {
+                // 清空之前的图片
+                while (teachimg.firstChild) {
+                    teachimg.removeChild(teachimg.firstChild);
+                }
+
+                // 创建新的图片元素
+                images[i].img.forEach((src) => {
+                    let img = document.createElement("img");
+                    img.setAttribute("src", src);
+                    img.addEventListener("click", function () {
+                        imgreader.setAttribute("src", src);
+                        reader.style.display = "flex"; // 显示图片阅读器
+                    });
+                    teachimg.appendChild(img); // 将图片添加到 teachimg 容器中
+                });
+
+                link.textContent = images[i].url; // 设置链接文本
+                moduleOpen(); // 打开模块
+            });
+        });
+
+        // 按钮切换逻辑
+        b.forEach((button, j) => {
+            button.addEventListener("click", () => {
+                if (j === 0) {
+                    b[0].classList.add("active"); // 激活快捷支付按钮
+                    b[1].classList.remove("active");
+                    walletout.style.transform = "translateX(0%)"; // 移动钱包输出
+                } else {
+                    b[0].classList.remove("active");
+                    b[1].classList.add("active"); // 激活手动支付按钮
+                    walletout.style.transform = "translateX(-50%)"; // 移动钱包输出
+                }
+            });
+        });
+
+        // 打开模块
+        function moduleOpen() {
+            zz.style.display = "block";
+            module.classList.add("show", "animate__zoomInDown");
+        }
+
+        // 关闭按钮点击事件
+        close.addEventListener("click", () => {
+            // 将滚动条置顶
+            document.getElementById("teachimg").scrollTop = 0;
+
+            copyTextToClipboard(link.textContent); // 复制链接文本到剪贴板
+            module.classList.remove("animate__zoomInDown");
+            module.classList.add("animate__zoomOutDown");
+            setTimeout(() => {
+                module.classList.remove("show", "animate__zoomOutDown");
+            }, 1000);
+            zz.style.display = "none";
+        });
+
+        // 图片阅读器点击事件
+        reader.addEventListener("click", () => {
+            imgreader.setAttribute("src", "");
+            reader.style.display = "none";
+        });
+
+        // 复制文本到剪贴板
+        function copyTextToClipboard(text) {
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(text).then(
+                    function () {
+                        console.log("成功复制到剪贴板!" + text);
+                    },
+                    function (err) {
+                        console.error("无法复制文本: ", err);
+                    }
+                );
+            } else {
+                console.warn("浏览器不支持 Clipboard API");
+            }
+        }
+    });
+
+</script>
+
+<script defer="" src="./USDT支付1_files/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;0dba8b6c01c74d51bfa1c84acd591d2b&quot;,&quot;r&quot;:1,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+
+
+
+<yd-mg-icon style="position: fixed; z-index: 2147483647;"><template shadowrootmode="open"><style>
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.all {
+    direction: ltr;
+}
+.all > * {
+    direction: rtl;
+}
+.hidden {
+    display: none;
+    transition: width 0.3s linear;
+}
+.container:hover .hidden {
+    width: var(--131b0bc3);
+    height: var(--367772ca);
+    display: flex;
+}
+.container {
+    position: fixed;
+    top:var(--8b7ed71a);
+    right:var(--2c4e45ba);
+    width: var(--b2ad46e2);
+    height: var(--14b33b7e);
+    background-color: #fff;
+    border-radius: var(--e55f886a);
+    box-shadow: 0 0 10px #b3b5b8;
+    transition: width 0.3s linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container:hover {
+    width: var(--301156d1);
+    border-radius: var(--e55f886a);
+    justify-content: space-around;
+}
+.icon {
+    width: var(--131b0bc3);
+    height: var(--367772ca);
+    cursor: pointer;
+    user-select: none;
+}
+.icon:hover {
+}
+.yd-translate-loader {
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #3498db;
+    border-radius: 50%;
+    height: var(--367772ca);
+    width:  var(--131b0bc3);
+    animation: spin 0.5s linear infinite;
+}
+@keyframes spin {
+0% { transform: rotate(0deg);
+}
+100% { transform: rotate(360deg);
+}
+}
+@keyframes append-animate {
+from {
+        opacity: 0;
+}
+to {
+        opacity: 1;
+}
+}
+.popup {
+  animation: popup 0.3s forwards;
+}
+@keyframes popup {
+0% {
+    opacity: 0;
+    transform: scale(0);
+}
+100% {
+    opacity: 1;
+    transform: scale(1);
+}
+}
+</style><div class="all" style="position: fixed; z-index: 2147483647; --131b0bc3: 22px; --367772ca: 22px; --8b7ed71a: 0px; --2c4e45ba: 0px; --b2ad46e2: 26px; --14b33b7e: 26px; --e55f886a: 13px; --301156d1: 78px;"><!----></div></template></yd-mg-icon><yd-mg-block-icon><template shadowrootmode="open"><style>@charset "UTF-8";
+.disabled-element[data-v-d3135d60] {
+  cursor: not-allowed;
+}
+.all[data-v-d3135d60] {
+  position: absolute;
+  z-index: 1;
+}
+.all .container[data-v-d3135d60] {
+  width: var(--5a3ced10);
+  height: var(--58dc89c6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.all .container .yd-line[data-v-d3135d60] {
+  display: block;
+  position: absolute;
+  height: var(--c03ec7f0);
+  top: var(--7808ebd8);
+  left: var(--891c21b0);
+}
+.all .container .yd-line .orignal[data-v-d3135d60] {
+  padding: 1px;
+  background-color: #E4E7F3;
+  height: var(--5934d8d6);
+}
+.all .container .yd-line .yd[data-v-d3135d60] {
+  padding: 1px;
+  background-color: #FF939E;
+  height: var(--4d327ada);
+}
+.all .container .yd-line .llm[data-v-d3135d60] {
+  padding: 1px;
+  background-color: #2485FF;
+  height: var(--18678bd3);
+}
+.all .container .tooltip-container[data-v-d3135d60] {
+  display: inline-block;
+  position: absolute;
+  top: var(--147b79a2);
+  left: var(--7afb4d26);
+}
+.all .container .tooltip-container .icon[data-v-d3135d60] {
+  width: var(--5a3ced10);
+  height: var(--58dc89c6);
+  background-image: var(--4a440a69);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.all .container .tooltip-container .icon[data-v-d3135d60]::before {
+  content: var(--4809e853);
+  display: none;
+}
+.all .container .tooltip-container .icon[data-v-d3135d60]:hover {
+  box-shadow: 0px 4px 10px rgba(56, 112, 200, 0.16);
+  transition: width 0.3s linear;
+  background-image: var(--4809e853);
+  cursor: pointer;
+}
+.all .container .tooltip-container .llmIcon[data-v-d3135d60] {
+  width: var(--5a3ced10);
+  height: var(--58dc89c6);
+  background-image: var(--4a440a69);
+  border-radius: 5px;
+}
+.all .container .tooltip-container .llmIcon[data-v-d3135d60]:hover {
+  width: var(--5a3ced10);
+  height: 48px;
+  background-image: var(--11da4116);
+  border-radius: 5px;
+}
+.all .container .tooltip-container .tooltip[data-v-d3135d60] {
+  position: absolute;
+  top: var(--523390c5);
+  /* 放在元素的上方 */
+  left: var(--178a82d2);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: #F9FBFF;
+  padding: 8px;
+  width: 150px;
+  height: 40px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  border: 1px solid rgba(216, 217, 219, 0.5);
+  box-shadow: 0px 1.2px 3.6px 0px rgba(0, 0, 0, 0.1), 0px 2px 20px 0px rgba(27, 19, 98, 0.08);
+  font-family: PingFang SC;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0em;
+  user-select: none;
+  color: #2A2B2E;
+}
+.all .container .tooltip-container .llmTooltip[data-v-d3135d60] {
+  position: absolute;
+  top: var(--523390c5);
+  /* 放在元素的上方 */
+  left: var(--178a82d2);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: #F9FBFF;
+  padding: 8px;
+  width: 200px;
+  height: 40px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  border: 1px solid rgba(216, 217, 219, 0.5);
+  box-shadow: 0px 1.2px 3.6px 0px rgba(0, 0, 0, 0.1), 0px 2px 20px 0px rgba(27, 19, 98, 0.08);
+  font-family: PingFang SC;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0em;
+  user-select: none;
+  color: #2A2B2E;
+}
+.all .container .yd-translate-loader-block[data-v-d3135d60] {
+  position: absolute;
+  top: var(--147b79a2);
+  left: var(--7afb4d26);
+  width: var(--5a3ced10);
+  height: var(--5a3ced10);
+  background-image: var(--3fa19693);
+  /* 确保这里是正确的图片路径 */
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0px 4px 10px rgba(56, 112, 200, 0.16);
+  overflow: hidden;
+  /* 保持子元素的圆角效果 */
+}
+.all .container .yd-translate-loader-block[data-v-d3135d60]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  background: linear-gradient(to left bottom, rgba(38, 132, 255, 0.6), rgba(120, 85, 250, 0.6));
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+.all .container .tip[data-v-d3135d60] {
+  background-color: #F9FBFF;
+  padding: 8px;
+  border-radius: 8px;
+  height: 400px;
+  border: 1px solid #D8D9DB;
+}</style><div data-v-d3135d60="" class="all notranslate" style="--5a3ced10: 24px; --58dc89c6: 24px; --c03ec7f0: 0px; --7808ebd8: 0px; --891c21b0: 0px; --5934d8d6: 0px; --4d327ada: 0px; --18678bd3: 0px; --147b79a2: -16px; --7afb4d26: -44px; --4a440a69: url(chrome-extension://jlpcnoohcpfgpbalhlggdhjocgnlgafn/block.svg); --4809e853: url(chrome-extension://jlpcnoohcpfgpbalhlggdhjocgnlgafn/block-h.svg); --11da4116: url(chrome-extension://jlpcnoohcpfgpbalhlggdhjocgnlgafn/block-h-llm.svg); --523390c5: undefined; --178a82d2: undefined; --3fa19693: url(chrome-extension://jlpcnoohcpfgpbalhlggdhjocgnlgafn/block-l.gif);"><!----></div></template></yd-mg-block-icon><yd-image-ocr style="z-index: 2147483647;"><template shadowrootmode="open"><style>@charset "UTF-8";
+.modal-overlay[data-v-04ce0a75] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-content[data-v-04ce0a75] {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  gap: 20px;
+  width: 800px;
+  height: 500px;
+  flex-direction: column;
+  position: relative;
+}
+.modal-header[data-v-04ce0a75] {
+  display: flex;
+  justify-content: flex-end;
+  height: 24px;
+}
+.modal-body[data-v-04ce0a75] {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+}
+.modal-body .imageContainer[data-v-04ce0a75] {
+  flex: 2;
+  justify-content: center;
+}
+.modal-body .img[data-v-04ce0a75] {
+  position: relative;
+  background-size: contain;
+  background-position: center;
+  height: 600px;
+  background-repeat: no-repeat;
+}
+.modal-body .img .box[data-v-04ce0a75] {
+  position: absolute;
+  border: #333 3px solid;
+}
+.modal-body .text-content[data-v-04ce0a75] {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* 根据需要调整文本内容的样式 */
+}
+.modal-body .text-content .text[data-v-04ce0a75] {
+  overflow-y: auto;
+  height: 450px;
+}
+.modal-body .text-content .toolbar[data-v-04ce0a75] {
+  height: 36px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.close-button[data-v-04ce0a75] {
+  background-color: transparent;
+  /* 透明背景 */
+  border: none;
+  /* 去除边框 */
+  cursor: pointer;
+  /* 鼠标悬停时显示指针 */
+  outline: none;
+  /* 去除焦点轮廓 */
+  position: absolute;
+  /* 绝对定位 */
+  top: 10px;
+  /* 距顶部的距离 */
+  right: 10px;
+  /* 距右边的距离 */
+  font-size: 24px;
+  /* 字体大小 */
+  line-height: 24px;
+  /* 行高，以确保垂直居中 */
+  color: #333;
+  /* 字体颜色 */
+  font-weight: bold;
+  /* 字体加粗 */
+}
+.close-button[data-v-04ce0a75]:hover {
+  color: #666;
+  /* 鼠标悬停时的颜色变化 */
+}
+.line[data-v-04ce0a75], .redline[data-v-04ce0a75] {
+  font-family: Arial, Helvetica, sans-serif;
+  /* 使用无衬线字体 */
+  font-size: 16px;
+  /* 设置合适的字体大小 */
+  line-height: 24px;
+  color: #333;
+  /* 文字颜色 */
+  padding: 3px 3px 3px 6px;
+  /* 内边距 */
+  margin-top: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-left-color 0.3s;
+  /* 背景色和边框颜色变化的过渡效果 */
+  border-left: 3px solid #ddd;
+  /* 设置灰色的左边框 */
+}
+.redline[data-v-04ce0a75] {
+  border-left-color: #e53935;
+  /* 鼠标悬停时边框颜色变为红色 */
+  background-color: #f5f5f5;
+}
+.button[data-v-04ce0a75] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #FB4A3E;
+  /* 一个明亮但不饱和的红色 */
+  color: white;
+  /* 文本颜色为白色 */
+  padding: 5px 10px;
+  /* 按钮内边距 */
+  border: none;
+  /* 无边框 */
+  border-radius: 5px;
+  /* 轻微的圆角 */
+  font-size: 10px;
+  text-transform: uppercase;
+  /* 文本大写 */
+  cursor: pointer;
+  /* 鼠标悬停时的指针样式 */
+  transition: background-color 0.3s;
+  /* 背景颜色变化的过渡效果 */
+}
+.button[data-v-04ce0a75]:hover {
+  background-color: #d32f2f;
+  /* 鼠标悬停时的背景颜色稍暗 */
+}
+.button[data-v-04ce0a75]:active {
+  background-color: #c62828;
+  /* 鼠标点击时的背景颜色更暗 */
+}
+.button[data-v-04ce0a75]:disabled {
+  background-color: #ef9a9a;
+  /* 禁用状态的按钮颜色更亮，更少饱和度 */
+  cursor: default;
+  /* 禁用状态的鼠标样式 */
+}
+.loading-indicator[data-v-04ce0a75] {
+  /* 添加你的样式，比如居中显示、动画等 */
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5em;
+  /* ...其他样式 */
+}
+.message[data-v-04ce0a75] {
+  position: absolute;
+  top: 50%;
+  /* 定位到父元素的中间 */
+  left: 50%;
+  /* 定位到父元素的中间 */
+  transform: translate(-50%, -50%);
+  /* 使用 transform 实现精确居中 */
+  padding: 10px;
+  background-color: white;
+  /* 设置背景颜色为白色 */
+  border: 1px solid blue;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  /* 添加阴影效果 */
+  text-align: center;
+  z-index: 100;
+  /* 确保提示信息在其他元素上方 */
+}
+.loader[data-v-04ce0a75] {
+  border: 5px solid #f3f3f3;
+  /* 浅灰色边框 */
+  border-top: 5px solid #3498db;
+  /* 蓝色边框 */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin-04ce0a75 2s linear infinite;
+  margin-bottom: 20px;
+}
+@keyframes spin-04ce0a75 {
+0% {
+    transform: rotate(0deg);
+}
+100% {
+    transform: rotate(360deg);
+}
+}</style><!----></template></yd-image-ocr></body></html>
